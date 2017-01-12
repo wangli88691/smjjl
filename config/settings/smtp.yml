@@ -1,0 +1,29 @@
+defaults: &defaults
+  config:
+    address: smtp.163.com
+    port: 25
+    user_name: wangli@uniwa.cn
+    password: "wangli"
+    authentication: :login
+    # domain: 163.com
+    enable_starttls_auto: false
+
+
+
+development:
+  <<: *defaults
+  host:
+    host: www.azl.dev:3000
+
+test:
+  <<: *defaults
+
+qa:
+  <<: *defaults
+  host:
+    host: www.49393.com
+
+production:
+  <<: *defaults
+  host:
+    host: www.azl.com.cn

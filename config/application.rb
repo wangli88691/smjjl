@@ -45,6 +45,6 @@ module Smjjl
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.perform_deliveries = true
-    config.action_mailer.smtp_settings = Setting::Config.smtp.symbolize_keys
+    config.action_mailer.smtp_settings = Setting::Smtp.to_options.symbolize_keys
   end
 end
